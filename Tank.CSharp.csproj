@@ -69,8 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bullet\BulletScript.cs" />
+    <Compile Include="Assets\Scripts\Camera\KeepDistanceScript.cs" />
     <Compile Include="Assets\Scripts\DummySpawnerScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\BulletHitKillScript.cs" />
+    <Compile Include="Assets\Scripts\Explosion Script\DestroyEffect.cs" />
+    <Compile Include="Assets\Scripts\Explosion Script\csLightControl.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerOrientScript.cs" />

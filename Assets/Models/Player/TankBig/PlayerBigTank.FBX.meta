@@ -1,0 +1,138 @@
+fileFormatVersion: 2
+guid: 07fba64589906664dbb5bda7d377ef2e
+timeCreated: 1451215441
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Mesh_0524
+    100002: Mesh_0525
+    100004: Mesh_0526
+    100006: Mesh_0527
+    100008: Mesh_0598
+    100010: Mesh_0599
+    100012: //RootNode
+    100014: Antennae
+    100016: Body
+    100018: Cannons
+    100020: TopCap
+    100022: Tracks
+    100024: Turret
+    100026: Wheels
+    400000: Mesh_0524
+    400002: Mesh_0525
+    400004: Mesh_0526
+    400006: Mesh_0527
+    400008: Mesh_0598
+    400010: Mesh_0599
+    400012: //RootNode
+    400014: Antennae
+    400016: Body
+    400018: Cannons
+    400020: TopCap
+    400022: Tracks
+    400024: Turret
+    400026: Wheels
+    2300000: Mesh_0524
+    2300002: Mesh_0525
+    2300004: Mesh_0526
+    2300006: Mesh_0527
+    2300008: Mesh_0598
+    2300010: Mesh_0599
+    2300012: Antennae
+    2300014: Body
+    2300016: Cannons
+    2300018: TopCap
+    2300020: Tracks
+    2300022: Turret
+    2300024: Wheels
+    3300000: Mesh_0524
+    3300002: Mesh_0525
+    3300004: Mesh_0526
+    3300006: Mesh_0527
+    3300008: Mesh_0598
+    3300010: Mesh_0599
+    3300012: Antennae
+    3300014: Body
+    3300016: Cannons
+    3300018: TopCap
+    3300020: Tracks
+    3300022: Turret
+    3300024: Wheels
+    4300000: Mesh_0524
+    4300002: Mesh_0525
+    4300004: Mesh_0526
+    4300006: Mesh_0527
+    4300008: Mesh_0598
+    4300010: Mesh_0599
+    4300012: Turret
+    4300014: Cannons
+    4300016: TopCap
+    4300018: Body
+    4300020: Wheels
+    4300022: Tracks
+    4300024: Antennae
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

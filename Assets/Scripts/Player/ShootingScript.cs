@@ -1,11 +1,29 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class ShootingScript : MonoBehaviour
 {
+    // Bullet object for instantiating on shooting.
     public BulletScript BulletPrefab;
+
+    // A bullet is spawned for each shooting point defined here. No shooting points mean no shooting.
+    public Transform[] Barrels;
+
+    // Time between shots (in seconds).
     public float ShootInterval = 0.2f;
+
+    // If true, shooting immediately from all shooting points, if false - from next unfired.
+    public bool AlternateFire = false;
+
+    // Current alternate shooting barrel;
+    int CurrentShooterIndex = 0;
+
+    // Counts time from last shot.
     float LastShotTime;
+
+    void Awake()
+    {
+        Debug.Assert(Barrels.Length > 0);
+    }
 
     void Update()
     {
@@ -22,17 +40,40 @@ public class ShootingScript : MonoBehaviour
         {
             LastShotTime = 0.0f;
 
-            Shoot();
+            Shoot(Barrels, BulletPrefab);
         }
     }
 
-    // spawn & launch bullet forward
-    void Shoot()
+    // Shoots from barrels.
+    void Shoot(Transform[] points, BulletScript prefab)
     {
-        Debug.Assert(BulletPrefab != null);
+        if (AlternateFire == false)
+        {
+            foreach (Transform point in points)
+            {
+                ShootFromPoint(point, prefab);
+            }
+        }
+        else
+        {
+            ShootFromPoint(points[CurrentShooterIndex], prefab);
 
-        BulletScript bullet = Instantiate(BulletPrefab);
-        bullet.transform.position = transform.position;
+            CurrentShooterIndex++;
+            if (CurrentShooterIndex >= Barrels.Length)
+            {
+                CurrentShooterIndex = 0;
+            }
+        }
+    }
+
+    // Spawns and launches a bullet.
+    void ShootFromPoint(Transform point, BulletScript prefab)
+    {
+        Debug.Assert(point);
+        Debug.Assert(prefab != null);
+
+        BulletScript bullet = Instantiate(prefab);
+        bullet.transform.position = point.position;
         bullet.transform.rotation = transform.rotation;
 
         bullet.Shoot();

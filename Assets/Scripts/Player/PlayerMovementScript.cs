@@ -26,7 +26,6 @@ public class PlayerMovementScript : MonoBehaviour
         Vector3 position = new Vector3();
         position.x = input.Horizontal * StepSize * Time.deltaTime;
         position.z = input.Vertical * StepSize * Time.deltaTime;
-        //transform.position = position;
 
         Agent.Move(position);
     }

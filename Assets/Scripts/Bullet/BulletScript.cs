@@ -25,7 +25,7 @@ public class BulletScript : MonoBehaviour
     void Move()
     {
         Vector3 position = transform.position;
-        position += transform.up * Speed;
+        position -= transform.up * Speed;
         transform.position = position;
 
         DistanceTravelled += Speed;

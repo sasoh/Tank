@@ -11,12 +11,13 @@ public enum ControlOrientation
 public class PlayerOrientScript : MonoBehaviour
 {
     public ControlOrientation Orientation = ControlOrientation.None;
+    public float TrackSightRadius = 1.0f;
     public float RotationSpeed = 1.0f;
-    Vector3 LastDirection = new Vector3();
+    Quaternion TargetRotation;
 
     void Awake()
     {
-        LastDirection = transform.forward;
+        TargetRotation = transform.rotation;
     }
 
     void Update()
@@ -32,13 +33,18 @@ public class PlayerOrientScript : MonoBehaviour
         }
 
         // for any significant direction change
-        if (Vector3.SqrMagnitude(direction) >= 0.01f)
+        if (Vector3.SqrMagnitude(direction) >= TrackSightRadius * TrackSightRadius)
         {
-            direction.Normalize();
-            LastDirection = direction;
+            TargetRotation = Quaternion.LookRotation(direction);
+        }
+        
+        if (Quaternion.Angle(transform.rotation, TargetRotation) < TrackSightRadius)
+        {
+            // reached
+            transform.rotation = TargetRotation;
+            TargetRotation = transform.rotation;
         }
 
-        Quaternion targetRotation = Quaternion.LookRotation(LastDirection);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, RotationSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, TargetRotation, RotationSpeed * Time.deltaTime);
     }
 }
