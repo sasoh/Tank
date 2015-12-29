@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public struct InputData
 {
@@ -8,7 +7,6 @@ public struct InputData
     public float LookHorizontal;
     public float LookVertical;
     public bool Shooting;
-    public bool FromPad;
 }
 
 /// <summary>
@@ -16,7 +14,6 @@ public struct InputData
 /// </summary>
 public class InputManager : Singleton<InputManager>
 {
-    float DeadZone = 0.1f;
     InputData LastInput;
 
     protected InputManager()
@@ -31,15 +28,14 @@ public class InputManager : Singleton<InputManager>
 
     void FixedUpdate()
     {
-        InputData newInput = new InputData();
-
-        newInput.Horizontal = Input.GetAxis("Horizontal");
-        newInput.Vertical = Input.GetAxis("Vertical");
-
-        newInput.LookHorizontal = Input.GetAxis("Pad X");
-        newInput.LookVertical = Input.GetAxis("Pad Y");
-        
-        newInput.Shooting = Input.GetButton("Fire1");
+        InputData newInput = new InputData
+        {
+            Horizontal = Input.GetAxis("Horizontal"),
+            Vertical = Input.GetAxis("Vertical"),
+            LookHorizontal = Input.GetAxis("Pad X"),
+            LookVertical = Input.GetAxis("Pad Y"),
+            Shooting = Input.GetButton("Fire1")
+        };
 
         LastInput = newInput;
     }

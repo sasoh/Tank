@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BulletHitKillScript : MonoBehaviour
 {
@@ -20,7 +18,7 @@ public class BulletHitKillScript : MonoBehaviour
                     Vector3 position = transform.position;
                     position.y -= 0.25f;
 
-                    GameObject explosion = Instantiate<GameObject>(ExplosionPrefab);
+                    GameObject explosion = Instantiate(ExplosionPrefab);
                     explosion.transform.position = position;
                     explosion.transform.rotation = Quaternion.identity;
                 }
