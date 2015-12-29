@@ -4,6 +4,7 @@ public class BulletScript : MonoBehaviour
 {
     public float Speed = 10.0f;
     public float DestructionDistance = 100.0f;
+    public float Damage = 10.0f;
     float DistanceTravelled = 0.0f;
     bool Shot = false;
 

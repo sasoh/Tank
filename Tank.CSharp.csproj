@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>5.3.0f4</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -74,12 +72,16 @@
     <Compile Include="Assets\Scripts\Camera\KeepDistanceScript.cs" />
     <Compile Include="Assets\Scripts\DummySpawnerScript.cs" />
     <Compile Include="Assets\Scripts\Enemy\BulletHitKillScript.cs" />
-    <Compile Include="Assets\Scripts\Explosion Script\DestroyEffect.cs" />
-    <Compile Include="Assets\Scripts\Explosion Script\csLightControl.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyBuggyBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Explosion\DestroyEffect.cs" />
+    <Compile Include="Assets\Scripts\Explosion\ExplosionDamageScript.cs" />
+    <Compile Include="Assets\Scripts\Explosion\csLightControl.cs" />
+    <Compile Include="Assets\Scripts\IDamageable.cs" />
     <Compile Include="Assets\Scripts\InputData.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerOrientScript.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\Player\ShootingScript.cs" />
     <Compile Include="Assets\Scripts\Singleton.cs" />
   </ItemGroup>

@@ -2,28 +2,15 @@
 
 public class BulletHitKillScript : MonoBehaviour
 {
-    public GameObject ExplosionPrefab;
-    bool IsDead = false;
-
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.GetComponent<BulletScript>() != null)
+        BulletScript bullet = other.gameObject.GetComponent<BulletScript>();
+        if (bullet != null)
         {
-            if (IsDead == false)
+            IDamageable hitTarget = GetComponent<IDamageable>();
+            if (hitTarget != null)
             {
-                IsDead = true;
-
-                if (ExplosionPrefab != null)
-                {
-                    Vector3 position = transform.position;
-                    position.y -= 0.25f;
-
-                    GameObject explosion = Instantiate(ExplosionPrefab);
-                    explosion.transform.position = position;
-                    explosion.transform.rotation = Quaternion.identity;
-                }
-
-                Destroy(gameObject);
+                hitTarget.Hit(bullet.Damage);
             }
         }
     }
