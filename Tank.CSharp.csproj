@@ -43,8 +43,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
     <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
     <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
@@ -71,6 +76,7 @@
     <Compile Include="Assets\Scripts\Enemy\BulletHitKillScript.cs" />
     <Compile Include="Assets\Scripts\Explosion Script\DestroyEffect.cs" />
     <Compile Include="Assets\Scripts\Explosion Script\csLightControl.cs" />
+    <Compile Include="Assets\Scripts\InputData.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovementScript.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerOrientScript.cs" />

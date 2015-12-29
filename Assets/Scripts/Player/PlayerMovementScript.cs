@@ -19,13 +19,10 @@ public class PlayerMovementScript : MonoBehaviour
     void ProcessInput()
     {
         InputData input = InputManager.Instance.GetInput();
-
-        // move 
-        Vector3 position = new Vector3
-        {
-            x = input.Horizontal*StepSize*Time.deltaTime,
-            z = input.Vertical*StepSize*Time.deltaTime
-        };
+        
+        Vector3 position = new Vector3();
+        position.x = input.Movement.x * StepSize * Time.deltaTime;
+        position.z = input.Movement.y * StepSize * Time.deltaTime;
 
         Agent.Move(position);
     }

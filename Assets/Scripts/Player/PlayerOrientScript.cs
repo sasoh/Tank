@@ -24,11 +24,11 @@ public class PlayerOrientScript : MonoBehaviour
         InputData input = InputManager.Instance.GetInput();
 
         // orient
-        Vector3 direction = new Vector3(input.LookHorizontal, 0.0f, input.LookVertical);
+        Vector3 direction = new Vector3(input.Looking.x, 0.0f, input.Looking.y);
         if (Orientation == ControlOrientation.Movement)
         {
-            direction.x = input.Horizontal;
-            direction.z = input.Vertical;
+            direction.x = input.Movement.x;
+            direction.z = input.Movement.y;
         }
 
         // for any significant direction change

@@ -1,14 +1,5 @@
 ﻿using UnityEngine;
 
-public struct InputData
-{
-    public float Horizontal;
-    public float Vertical;
-    public float LookHorizontal;
-    public float LookVertical;
-    public bool Shooting;
-}
-
 /// <summary>
 /// Returns input from last FixedUpdate.
 /// </summary>
@@ -28,12 +19,13 @@ public class InputManager : Singleton<InputManager>
 
     void FixedUpdate()
     {
+        Vector2 moving = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 looking = new Vector2(Input.GetAxis("Pad X"), Input.GetAxis("Pad Y"));
+
         InputData newInput = new InputData
         {
-            Horizontal = Input.GetAxis("Horizontal"),
-            Vertical = Input.GetAxis("Vertical"),
-            LookHorizontal = Input.GetAxis("Pad X"),
-            LookVertical = Input.GetAxis("Pad Y"),
+            Movement = moving,
+            Looking = looking,
             Shooting = Input.GetButton("Fire1")
         };
 
